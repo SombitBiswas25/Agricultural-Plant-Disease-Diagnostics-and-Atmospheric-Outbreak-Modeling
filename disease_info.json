@@ -1,0 +1,327 @@
+{
+  "Apple_scab": {
+    "title": "Apple Scab (Fungal Infection)",
+    "meds": [
+      "Apply copper-based fungicides or sulfur sprays early in the season.",
+      "For severe infections, use chemical fungicides containing chlorothalonil, myclobutanil, or fenarimol."
+    ],
+    "care": [
+      "Prune the tree canopy regularly to increase airflow and sunlight penetration.",
+      "Rake and destroy all fallen leaves around the base of the tree to reduce overwintering spores."
+    ],
+    "prevention": [
+      "Choose scab-resistant apple cultivars (e.g., Liberty, Enterprise, Freedom).",
+      "Avoid overhead sprinkler irrigation; water at the base of the tree.",
+      "Clear wild crabapple trees near your orchard to prevent cross-contamination."
+    ]
+  },
+  "Bacterial_spot": {
+    "title": "Bacterial Spot (Bacterial Infection)",
+    "meds": [
+      "Spray copper-based bactericides (like copper hydroxide) weekly during wet periods.",
+      "For early-season protection in stone fruits, streptomycin sprays can be used under agricultural guidance."
+    ],
+    "care": [
+      "Never prune or handle plants when foliage is wet, as bacteria spread rapidly in water droplets.",
+      "Prune lower branches (bottom 12-18 inches) to prevent bacteria from splashing up from the soil."
+    ],
+    "prevention": [
+      "Purchase certified disease-free seeds and transplants.",
+      "Use drip irrigation rather than overhead watering to keep foliage dry.",
+      "Practice a 2-to-3 year crop rotation, avoiding nightshade crops (tomatoes, peppers, potatoes)."
+    ]
+  },
+  "Black_rot": {
+    "title": "Black Rot (Fungal Infection)",
+    "meds": [
+      "Apply copper-based fungicides, captan, or mancozeb starting at bud break.",
+      "Organic options include liquid copper sprays or lime-sulfur."
+    ],
+    "care": [
+      "Inspect vines regularly and prune out all infected canes, leaves, and mummified berries.",
+      "Burn or bury all pruned materials immediately; do not leave them on the ground or in compost."
+    ],
+    "prevention": [
+      "Select sunny planting locations with excellent air circulation.",
+      "Keep vines properly trained and spaced on trellises to speed up leaf drying.",
+      "Control weeds under the vine canopy to reduce humidity."
+    ]
+  },
+  "Cedar_apple_rust": {
+    "title": "Cedar Apple Rust (Fungal Infection)",
+    "meds": [
+      "Apply fungicides containing myclobutanil or copper soap starting at the pink bud stage.",
+      "Sulfur sprays can be used as an organic preventive treatment."
+    ],
+    "care": [
+      "Remove orange, jelly-like galls from nearby juniper/cedar trees in early spring.",
+      "Prune affected apple leaves showing orange rust spots to prevent spread."
+    ],
+    "prevention": [
+      "Avoid planting apple trees within a few hundred yards of red cedars or junipers.",
+      "Grow rust-resistant apple varieties (e.g., Delicious, Liberty, Winesap)."
+    ]
+  },
+  "Cercospora_leaf_spot Gray_leaf_spot": {
+    "title": "Cercospora / Gray Leaf Spot (Fungal Infection)",
+    "meds": [
+      "Use protective fungicides containing chlorothalonil, copper, or strobilurins when symptoms first appear."
+    ],
+    "care": [
+      "Ensure recommended spacing between plants to maximize airflow.",
+      "Remove and destroy heavily spotted leaves to limit spore production."
+    ],
+    "prevention": [
+      "Rotate crops with non-susceptible plants (e.g., rotate corn/grains with legumes).",
+      "Deeply till or plow crop residue after harvest to bury fungal spores in the soil."
+    ]
+  },
+  "Common_rust_": {
+    "title": "Common Rust (Fungal Infection)",
+    "meds": [
+      "Apply sulfur, copper-based fungicides, or neem oil for mild organic control.",
+      "Use systemic fungicides (like azoxystrobin) for severe commercial crop infections."
+    ],
+    "care": [
+      "Carefully pluck off heavily infected leaves early in the morning.",
+      "Water crops at the root level early in the morning so the foliage dries quickly in the sun."
+    ],
+    "prevention": [
+      "Grow rust-resistant crop hybrids.",
+      "Maintain optimal plant spacing to prevent moisture traps within the canopy.",
+      "Destroy weed hosts (like wood sorrel) that act as alternative hosts for rust fungi."
+    ]
+  },
+  "Early_blight": {
+    "title": "Early Blight (Fungal Infection)",
+    "meds": [
+      "Apply copper fungicides or chlorothalonil at the first sign of concentric target-like spots.",
+      "Organic gardeners can use Bacillus subtilis bio-fungicide."
+    ],
+    "care": [
+      "Remove and discard infected lower leaves (do not compost them).",
+      "Stake and prune tomato/potato plants to keep foliage off the damp soil."
+    ],
+    "prevention": [
+      "Practice a strict 3-year crop rotation for nightshade crops.",
+      "Apply a thick layer of mulch (straw or plastic) around the plant base to block soil-borne spores.",
+      "Avoid overhead watering; use drip lines or water manually at the base."
+    ]
+  },
+  "Esca_(Black_Measles)": {
+    "title": "Esca / Black Measles (Trunk Disease)",
+    "meds": [
+      "There is no direct chemical cure for infected vines.",
+      "Use protective pastes or paint containing tebuconazole or copper on pruning cuts to prevent new infections."
+    ],
+    "care": [
+      "Postpone pruning until late winter or dry weather when fungal spores are less active.",
+      "Prune out diseased wood down to healthy white wood tissue and burn/remove it."
+    ],
+    "prevention": [
+      "Always disinfect pruning tools with a 10% bleach solution or isopropyl alcohol between vines.",
+      "Seal all pruning wounds larger than 0.5 inches immediately with pruning sealer."
+    ]
+  },
+  "Haunglongbing_(Citrus_greening)": {
+    "title": "Huanglongbing / Citrus Greening (Bacterial Disease)",
+    "meds": [
+      "No chemical cure exists for the disease itself.",
+      "Control the Asian Citrus Psyllid vector using systemic insecticides (e.g., imidacloprid) or organic horticultural oils."
+    ],
+    "care": [
+      "Provide foliar sprays containing micronutrients (zinc, iron, manganese) to prolong tree productivity.",
+      "Aggressively prune and destroy infected limbs, though removing the entire tree is often necessary."
+    ],
+    "prevention": [
+      "Buy only certified disease-free citrus stock from licensed nurseries.",
+      "Inspect citrus leaves regularly for asymmetrical yellowing and the psyllid insect.",
+      "Immediately remove and burn infected trees to protect neighboring citrus groves."
+    ]
+  },
+  "Late_blight": {
+    "title": "Late Blight (Oomycete / Water Mold Infection)",
+    "meds": [
+      "Apply copper-based fungicides or chlorothalonil protectants immediately when regional alerts are active.",
+      "Use systemic fungicides like metalaxyl for agricultural control."
+    ],
+    "care": [
+      "This is a highly destructive disease. Immediately pull up, bag, and destroy the entire infected plant.",
+      "Do not compost infected plants, as spores can survive and spread via wind."
+    ],
+    "prevention": [
+      "Plant certified blight-resistant varieties (e.g., Mountain Magic, Defiant).",
+      "Ensure plants are well-spaced and in full sun to dry foliage quickly.",
+      "Destroy volunteer tomato/potato plants that emerge in early spring."
+    ]
+  },
+  "Leaf_Mold": {
+    "title": "Leaf Mold (Fungal Infection)",
+    "meds": [
+      "Apply copper fungicides, chlorothalonil, or sulfur-based sprays.",
+      "Organic options include potassium bicarbonate sprays."
+    ],
+    "care": [
+      "Lower greenhouse/indoor humidity below 85% using fans and ventilation.",
+      "Prune lower branches and space plants widely to reduce microclimate humidity."
+    ],
+    "prevention": [
+      "Use drip lines instead of overhead sprinklers.",
+      "Grow leaf mold-resistant tomato cultivars.",
+      "Thoroughly sanitize greenhouse stakes, cages, and structures between seasons."
+    ]
+  },
+  "Leaf_blight_(Isariopsis_Leaf_Spot)": {
+    "title": "Leaf Blight (Fungal Infection)",
+    "meds": [
+      "Spray copper oxychloride or mancozeb at the first sign of symptoms.",
+      "Neem oil is a mild organic alternative for early stages."
+    ],
+    "care": [
+      "Remove and discard spotted leaves promptly.",
+      "Prune internal branches of fruit trees/vines to maximize sunlight penetration."
+    ],
+    "prevention": [
+      "Clean up fall leaf debris diligently.",
+      "Avoid watering plants late in the evening; ensure leaves do not stay wet overnight."
+    ]
+  },
+  "Leaf_scorch": {
+    "title": "Leaf Scorch (Environmental or Bacterial)",
+    "meds": [
+      "If bacterial (Xylella fastidiosa), there is no chemical cure. Control leafhopper insect vectors with insecticides.",
+      "If environmental, apply deep watering and root stimulants instead of chemical meds."
+    ],
+    "care": [
+      "Water deeply once or twice a week during dry summer spells rather than shallow daily watering.",
+      "Apply a 2-3 inch layer of organic mulch around the root zone to conserve soil moisture."
+    ],
+    "prevention": [
+      "Avoid over-fertilizing with high-nitrogen fertilizers, which forces tender growth vulnerable to drying.",
+      "Ensure plants are protected from hot, dry wind using windbreaks.",
+      "Improve soil drainage in heavy clay soils."
+    ]
+  },
+  "Northern_Leaf_Blight": {
+    "title": "Northern Leaf Blight (Fungal Infection)",
+    "meds": [
+      "Apply foliar fungicides containing propiconazole or azoxystrobin if blight symptoms appear on upper leaves before silking."
+    ],
+    "care": [
+      "Promote strong root development through balanced soil nutrition.",
+      "Bury crop debris with autumn tillage to accelerate decomposition of fungal spores."
+    ],
+    "prevention": [
+      "Plant resistant crop hybrids.",
+      "Rotate corn with non-grass crops like soybeans or alfalfa.",
+      "Maintain clean borders around fields to reduce alternative grass hosts."
+    ]
+  },
+  "Powdery_mildew": {
+    "title": "Powdery Mildew (Fungal Infection)",
+    "meds": [
+      "Spray potassium bicarbonate, neem oil, sulfur, or copper fungicides.",
+      "A home remedy spray of 40% milk and 60% water under sunlight also acts as an effective natural fungicide."
+    ],
+    "care": [
+      "Move potted plants to bright, sunny areas, as powdery mildew thrives in cool, shady, humid conditions.",
+      "Prune congested center branches to allow air and light to circulate through the plant."
+    ],
+    "prevention": [
+      "Water plants early in the morning and from below.",
+      "Space plants at recommended distances.",
+      "Plant powdery mildew-resistant varieties."
+    ]
+  },
+  "Septoria_leaf_spot": {
+    "title": "Septoria Leaf Spot (Fungal Infection)",
+    "meds": [
+      "Apply copper-based fungicides or chlorothalonil at the first sign of tiny circular spots with grey centers."
+    ],
+    "care": [
+      "Stake and cage plants immediately. Prune off all lower branches touching the ground.",
+      "Apply mulch to create a barrier between the soil-borne spores and the leaves."
+    ],
+    "prevention": [
+      "Practice a 2-year crop rotation away from solanaceous plants.",
+      "Thoroughly clean up and discard all plant residues in autumn.",
+      "Avoid overhead watering to keep foliage dry."
+    ]
+  },
+  "Spider_mites Two-spotted_spider_mite": {
+    "title": "Spider Mites (Pest Infestation)",
+    "meds": [
+      "Spray with insecticidal soap, neem oil, or horticultural oils.",
+      "For severe infestations, use specific miticides (like abamectin) to avoid killing beneficial bugs."
+    ],
+    "care": [
+      "Blasts leaves with a strong jet of water from a hose to physically wash mites and webs off.",
+      "Mites love dry, dusty environments. Spraying foliage and misting increases humidity, driving them away."
+    ],
+    "prevention": [
+      "Release beneficial predatory insects (like ladybugs, lacewings, or Phytoseiidae predatory mites).",
+      "Keep plants well-irrigated, as drought-stressed plants are highly vulnerable to mite outbreaks."
+    ]
+  },
+  "Target_Spot": {
+    "title": "Target Spot (Fungal Infection)",
+    "meds": [
+      "Use protective fungicides containing chlorothalonil, copper, or azoxystrobin."
+    ],
+    "care": [
+      "Keep plants supported off the ground using stakes or cages.",
+      "Prune lower suckers and leaves to increase ventilation."
+    ],
+    "prevention": [
+      "Enforce crop rotation.",
+      "Irrigate early in the day so leaf moisture evaporates quickly."
+    ]
+  },
+  "Tomato_Yellow_Leaf_Curl_Virus": {
+    "title": "Tomato Yellow Leaf Curl (Viral Infection)",
+    "meds": [
+      "There is no chemical cure for the virus.",
+      "Control the silverleaf whitefly vector using insecticidal soaps, neem oil, imidacloprid, or yellow sticky traps."
+    ],
+    "care": [
+      "Cover young plants with fine mesh floating row covers to block whiteflies.",
+      "Pull up and bag infected plants immediately to prevent whiteflies from carrying the virus to other plants."
+    ],
+    "prevention": [
+      "Plant resistant varieties (look for TYLCV-resistant labels).",
+      "Eliminate weeds around the garden, as many act as whitefly breeding grounds.",
+      "Clean tools after working with infected crops."
+    ]
+  },
+  "Tomato_mosaic_virus": {
+    "title": "Tomato Mosaic (Viral Infection)",
+    "meds": [
+      "There is no chemical treatment or cure.",
+      "Wash tools and hands with non-fat dry milk powder or a 20% household bleach solution to deactivate the virus."
+    ],
+    "care": [
+      "Remove, bag, and burn/discard the entire plant. Do not compost.",
+      "Avoid working with healthy plants immediately after touching diseased ones."
+    ],
+    "prevention": [
+      "Use certified disease-free or treated seeds.",
+      "Avoid smoking or handling tobacco near tomato plants, as tobacco mosaic virus can cross-contaminate.",
+      "Plant resistant varieties."
+    ]
+  },
+  "healthy": {
+    "title": "Healthy Plant Leaf",
+    "meds": [
+      "No medicine needed! The plant is healthy."
+    ],
+    "care": [
+      "Provide regular watering at the base of the plant (avoiding wet foliage).",
+      "Ensure the plant receives the correct amount of daily sunlight for its species.",
+      "Add compost or balanced organic fertilizer according to seasonal guidelines."
+    ],
+    "prevention": [
+      "Practice clean gardening by cleaning tools and pots between uses.",
+      "Inspect leaves weekly to catch pests or spot signs of leaf discoloration early."
+    ]
+  }
+}

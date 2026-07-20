@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bio-Quantum Plant Diagnostic Suite</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/static/css/style.css?v=6">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="logo-area">
+                <span class="logo-icon">🌿</span>
+                <div class="logo-text">
+                    <h2>AgriShield</h2>
+                    <span>Bio-Quantum Suite</span>
+                </div>
+            </div>
+            
+            <nav class="nav-menu">
+                <a href="#diagnosis" class="nav-item active" data-tab="diagnosis">
+                    <span class="nav-icon">🔍</span> Diagnostic Hub
+                </a>
+                <!--
+                <a href="#quantum" class="nav-item" data-tab="quantum">
+                    <span class="nav-icon">⚛️</span> Quantum Circuit
+                </a>
+                <a href="#metrics" class="nav-item" data-tab="metrics">
+                    <span class="nav-icon">📊</span> Model Metrics
+                </a>
+                -->
+                <a href="#treatments" class="nav-item" data-tab="treatments">
+                    <span class="nav-icon">📖</span> Treatment Index
+                </a>
+                <a href="#history" class="nav-item" data-tab="history">
+                    <span class="nav-icon">⏳</span> Scan History
+                </a>
+                <a href="#weather" class="nav-item" data-tab="weather">
+                    <span class="nav-icon">🌤️</span> Agro-Weather
+                </a>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <p>B.Tech Capstone Project</p>
+                <span>v2.1.0 • CNN-QML Hybrid</span>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="top-header">
+                <div class="header-title">
+                    <h1 id="page-title">Diagnostic Hub</h1>
+                    <p id="page-subtitle">Cross-Breed Symptom Scan & Quantum Analysis</p>
+                </div>
+                <div class="system-status">
+                    <span class="status-indicator online"></span>
+                    <span class="status-text">QPU Simulator Online</span>
+                </div>
+            </header>
+
+            <!-- Weather Alert Warning Banner -->
+            <div id="weather-alert-banner" class="weather-alert-banner alert-hidden">
+                <div class="alert-content">
+                    <span class="alert-icon">⚠️</span>
+                    <div class="alert-body">
+                        <h4>Agro-Weather Advisory</h4>
+                        <p id="weather-alert-text">Analyzing upcoming weather risk patterns...</p>
+                    </div>
+                </div>
+                <button id="close-weather-alert" class="btn-close-alert">✕</button>
+            </div>
+
+            <!-- Tab Contents -->
+            <div class="tab-viewport">
+                
+                <!-- DIAGNOSIS TAB -->
+                <section id="tab-diagnosis" class="tab-pane active">
+                    <div class="grid-layout">
+                        <!-- Left column: Upload & Guidelines -->
+                        <div class="pane-column">
+                            <div class="glass-card upload-card">
+                                <h3>📤 Upload Leaf Specimen</h3>
+                                <p class="card-desc">Drag and drop or browse to submit an image of the plant leaf</p>
+                                
+                                <div class="drop-zone" id="drop-zone">
+                                    <div class="drop-zone-content">
+                                        <div class="upload-icon">🍃</div>
+                                        <p class="upload-text">Drag leaf image here or <span>browse files</span></p>
+                                        <p class="upload-sub">Supports JPG, PNG (Max 5MB)</p>
+                                    </div>
+                                    <input type="file" id="file-input" accept="image/*" class="file-hidden">
+                                    
+                                    <!-- Scan Overlay laser line -->
+                                    <div class="scanner-laser" id="scanner-laser"></div>
+                                    <img id="image-preview" src="" alt="Specimen Preview" class="image-preview-hidden">
+                                </div>
+                                
+                                <div class="button-group">
+                                    <button id="analyze-btn" class="btn btn-primary" disabled>
+                                        <span class="btn-icon">⚡</span> Run Quantum-CNN Diagnosis
+                                    </button>
+                                    <button id="reset-btn" class="btn btn-secondary btn-hidden">
+                                        Clear Specimen
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Diagnostic Guidelines -->
+                            <div class="glass-card guide-card">
+                                <h3>💡 Scanning Guidelines</h3>
+                                <div class="guide-grid">
+                                    <div class="guide-item">
+                                        <span class="guide-icon">🎯</span>
+                                        <div class="guide-info">
+                                            <h4>Isolate Symptoms</h4>
+                                            <p>Focus the camera directly on leaf spots or discolored regions.</p>
+                                        </div>
+                                    </div>
+                                    <div class="guide-item">
+                                        <span class="guide-icon">☀️</span>
+                                        <div class="guide-info">
+                                            <h4>Optimal Lighting</h4>
+                                            <p>Use diffuse daylight; avoid shadows or harsh direct flashes.</p>
+                                        </div>
+                                    </div>
+                                    <div class="guide-item">
+                                        <span class="guide-icon">🍂</span>
+                                        <div class="guide-info">
+                                            <h4>Single Specimen</h4>
+                                            <p>Include only one leaf per photo to prevent confusion.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right column: Diagnosis Output -->
+                        <div class="pane-column">
+                            <!-- Pre-analysis state -->
+                            <div class="glass-card center-card" id="waiting-state">
+                                <div class="pulsing-leaf">🌿</div>
+                                <h3>Ready for Specimen</h3>
+                                <p>Provide a leaf specimen on the left and run diagnostic analysis to view quantum features, classification confidence, and treatment guidelines.</p>
+                            </div>
+
+                            <!-- Invalid leaf warning -->
+                            <div class="glass-card warning-card warning-hidden" id="warning-state-box">
+                                <div class="warning-icon-area">⚠️</div>
+                                <h3>Invalid Specimen Detected</h3>
+                                <p id="warning-message"></p>
+                                <span class="similarity-score" id="similarity-score-badge">Similarity: --</span>
+                            </div>
+
+                            <!-- Analysis Results Output (Hidden by default) -->
+                            <div class="results-container results-hidden" id="results-state">
+                                <!-- Severity Badge Card -->
+                                <div class="glass-card status-summary-card">
+                                    <div class="status-header">
+                                        <span class="severity-badge" id="severity-badge">--</span>
+                                        <div class="status-title-area">
+                                            <h2 id="detected-disease-title">--</h2>
+                                            <p id="diagnosis-timestamp">Analyzed just now</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Probability Bars -->
+                                <div class="glass-card confidence-card">
+                                    <h3>📊 Confidence Breakdown</h3>
+                                    <div class="probability-list" id="probabilities-list">
+                                        <!-- Will be dynamically populated -->
+                                    </div>
+                                </div>
+
+                                <!-- Treatment Information Card -->
+                                <div class="glass-card treatment-detail-card" id="treatment-card">
+                                    <div class="treatment-tabs">
+                                        <button class="treatment-tab-btn active" data-sec="meds">💊 Medications</button>
+                                        <button class="treatment-tab-btn" data-sec="care">🌿 Care Plan</button>
+                                        <button class="treatment-tab-btn" data-sec="prevent">🛡️ Prevention</button>
+                                    </div>
+                                    <div class="treatment-content">
+                                        <ul id="treatment-items-list" class="treatment-list">
+                                            <!-- Dynamically filled -->
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <div class="action-footer">
+                                    <button class="btn btn-secondary" id="save-history-btn">💾 Log Diagnostics</button>
+                                    <button class="btn btn-secondary" id="print-report-btn">🖨️ Export PDF</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+
+                <!-- TREATMENT DATABASE TAB -->
+                <section id="tab-treatments" class="tab-pane">
+                    <div class="grid-layout vertical-grid">
+                        <div class="glass-card filter-card">
+                            <h3>📖 Treatment Search Engine</h3>
+                            <p class="card-desc">Browse through treatments, preventive measures, and plant care instructions for all supported agricultural conditions</p>
+                            <div class="search-box-container">
+                                <input type="text" id="db-search" placeholder="Search disease or crop type (e.g. apple, blight, rust)...">
+                                <span class="search-icon">🔍</span>
+                            </div>
+                        </div>
+
+                        <div class="treatments-grid" id="treatments-db-grid">
+                            <!-- Populated dynamically via JS -->
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SCAN HISTORY TAB -->
+                <section id="tab-history" class="tab-pane">
+                    <div class="grid-layout vertical-grid">
+                        <div class="glass-card history-header-card">
+                            <div class="history-actions">
+                                <div>
+                                    <h3>⏳ Diagnostic Scan Archive</h3>
+                                    <p class="card-desc">Review records of previous specimens scanned and analyzed on this browser</p>
+                                </div>
+                                <button id="clear-history-btn" class="btn btn-danger">🗑️ Clear History</button>
+                            </div>
+                        </div>
+
+                        <!-- Empty state -->
+                        <div class="glass-card center-card" id="history-empty">
+                            <span class="empty-icon">📂</span>
+                            <h3>No Diagnostic Records Found</h3>
+                            <p>Diagnostic history will populate automatically as you scan leaf specimens and click "Log Diagnostics".</p>
+                        </div>
+
+                        <!-- History List -->
+                        <div class="history-list" id="history-items-container">
+                            <!-- Populated dynamically -->
+                        </div>
+                    </div>
+                </section>
+
+                <!-- AGRO-WEATHER TAB -->
+                <section id="tab-weather" class="tab-pane">
+                    <div class="grid-layout vertical-grid">
+                        <!-- Location Search & Current Details -->
+                        <div class="glass-card weather-control-card">
+                            <div class="weather-control-header">
+                                <div>
+                                    <h3>🌤️ Agro-Weather Forecast Hub</h3>
+                                    <p class="card-desc">Monitor local atmospheric variables and calculate real-time disease outbreak risks for crops.</p>
+                                </div>
+                                <div class="weather-search-bar">
+                                    <input type="text" id="weather-city-input" placeholder="Search City (e.g. London, California, New Delhi)...">
+                                    <button id="weather-search-btn" class="btn btn-secondary">Search</button>
+                                    <button id="weather-detect-btn" class="btn btn-secondary" title="Detect Location">📍 Detect</button>
+                                </div>
+                            </div>
+                            <div class="weather-current-summary" id="weather-current-summary">
+                                <div class="location-display">
+                                    <span class="loc-pin">📍</span>
+                                    <div class="loc-details">
+                                        <h4 id="weather-location-name">Loading location...</h4>
+                                        <span id="weather-coords">lat: --, lon: --</span>
+                                    </div>
+                                </div>
+                                <div class="weather-main-stats">
+                                    <div class="main-stat-item">
+                                        <span class="stat-icon" id="current-weather-icon">☀️</span>
+                                        <div class="stat-info">
+                                            <span class="stat-value" id="current-temp">--°C</span>
+                                            <span class="stat-label" id="current-weather-desc">Clear sky</span>
+                                        </div>
+                                    </div>
+                                    <div class="main-stat-item">
+                                        <span class="stat-icon">💧</span>
+                                        <div class="stat-info">
+                                            <span class="stat-value" id="current-humidity">--%</span>
+                                            <span class="stat-label">Humidity</span>
+                                        </div>
+                                    </div>
+                                    <div class="main-stat-item">
+                                        <span class="stat-icon">🌧️</span>
+                                        <div class="stat-info">
+                                            <span class="stat-value" id="current-precipitation">-- mm</span>
+                                            <span class="stat-label">Precipitation</span>
+                                        </div>
+                                    </div>
+                                    <div class="main-stat-item">
+                                        <span class="stat-icon">💨</span>
+                                        <div class="stat-info">
+                                            <span class="stat-value" id="current-windspeed">-- km/h</span>
+                                            <span class="stat-label">Max Wind</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Risk Meter & Agricultural Insights -->
+                        <div class="weather-risk-split">
+                            <!-- Left: Risk Gauge Card -->
+                            <div class="glass-card risk-gauge-card">
+                                <h3>🛡️ Fungal Disease Risk Index</h3>
+                                <p class="card-desc">Computed risk of plant blight, mildews, and rust development over the next 15 days</p>
+                                <div class="risk-gauge-container">
+                                    <div class="risk-gauge-wheel">
+                                        <div class="risk-indicator-pointer" id="risk-pointer" style="transform: rotate(0deg);"></div>
+                                        <div class="risk-gauge-center">
+                                            <span id="risk-value-text">LOW</span>
+                                            <span class="risk-sub-label">Outbreak Risk</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="risk-legend">
+                                    <span class="legend-item low"><span class="legend-color"></span> Low</span>
+                                    <span class="legend-item mod"><span class="legend-color"></span> Moderate</span>
+                                    <span class="legend-item high"><span class="legend-color"></span> High</span>
+                                </div>
+                            </div>
+
+                            <!-- Right: Crop Insights & Advice -->
+                            <div class="glass-card weather-insights-card">
+                                <h3>🌾 Agro-Advisory & Insights</h3>
+                                <p class="card-desc">Weather-based farming advisory for crop protection</p>
+                                <div class="insights-content" id="weather-insights-content">
+                                    <div class="insight-entry">
+                                        <span class="insight-icon">🔍</span>
+                                        <div class="insight-details">
+                                            <h4>Waiting for weather telemetry...</h4>
+                                            <p>Select a location or detect location to generate automated insights and agricultural guidelines.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 15 Day Forecast Timeline -->
+                        <div class="glass-card forecast-timeline-card">
+                            <h3>📅 15-Day Agro-Weather Outlook</h3>
+                            <p class="card-desc">Daily meteorological projections and agricultural threat assessment</p>
+                            <div class="timeline-scroll-container">
+                                <button id="forecast-scroll-left" class="forecast-scroll-btn scroll-left" aria-label="Scroll left">‹</button>
+                                <div class="forecast-grid-wrapper" id="forecast-grid-wrapper">
+                                    <div class="forecast-grid" id="weather-forecast-grid">
+                                        <!-- Dynamic 15-day forecast cards populated by JS -->
+                                    </div>
+                                </div>
+                                <button id="forecast-scroll-right" class="forecast-scroll-btn scroll-right" aria-label="Scroll right">›</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+    </div>
+    <!-- Custom JavaScript -->
+    <script src="/static/js/main.js?v=3"></script>
+</body>
+</html>
